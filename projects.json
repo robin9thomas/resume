@@ -1,0 +1,21 @@
+{
+    "projects": {
+        "1": {
+            "name": "ERP CIT Dessaint",
+            "description": "Mise à jour version php d'un outil existant. Implémentation de nouvelles fonctionnalités et refonte de l'interface utilisateur.",
+            "goal": "Faciliter la gestion des commandes, dynamiser la chaines de production",
+            "technologies": "PHP 5.4 => PHP 8, HTML, CSS, JavaScript, MySQL",
+            "image": "./assets/img/cit-logo.jpg",
+            "difficulty": "Comprendre, appréhender et s'approprier le code existant."
+        },
+        "2": {  
+            "name": "Site Web client ATS",
+            "description": "Développement d'un site mettant en avant les réalisations de l'entreprise ainsi que ses services.",
+            "technologies": "React, TypeScript, Node.js, Express, Mysql, TailwindCSS",
+            "goal": "Améliorer la visibilité en ligne de l'entreprise et attirer de nouveaux clients. Associer une image haut de gamme à l'entreprise.",
+            "link": "https://ats-serrurerie.com",
+            "image": "./assets/img/ats.png",
+            "difficulty": "Travailler avec des utiliosateurs non techniques pour définir leurs besoins et attentes."
+        }
+    } 
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Robin Thomas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <header>
+        <img class="header-logo" src="./assets/img/header-logo.png" alt="Robin THOMAS">
+    </header>
+    <main>
+        <section class="profile">
+            <div class="description">
+                <h2>Full Stack Developer</h2>
+                <p>
+                    Web à l’ESGI Lille, je suis à la recherche d’une
+                    opportunité pour mettre en pratique et développer
+                    mes compétences en tant que développeur.
+                </p>
+            </div>
+
+            <div class="knowledge">
+                <div class="skills">
+                    <div>
+                        <h3>Langages</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>Node</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>Express</li>
+                            <li>React</li>
+                            <li>Nests</li>
+                            <li>Angular</li>
+                            <li>Laravel</li>
+                            <li>Symfony</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Outils</h3>
+                        <ul>
+                            <li>AWS</li>
+                            <li>Docker</li>
+                            <li>Render/Vercel</li>
+                            <li>Git</li>
+                            <li>GitHub/GitLab</li>
+                            <li>Postman</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="diplomas">
+                    <h3>Diplomes</h3>
+                    <ul>
+                        <li>Bachelor Ingénierie du Web - ESGI Lille (2023)</li>
+                        <li>Master Ingénierie du Web - ESGI Lille (2025)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projects-header">
+                <h3 onclick="resetProjectDisplay()">Projets</h3>
+                <span class="link" onclick="displayProject(1)">CIT Dessaint</span>
+                <span class="link" onclick="displayProject(2)">ATS</span>
+            </div>
+        </section>
+        <section id="project-placeholder">
+            <div class="project-placeholder-container">
+                <img class="project-illustration" src="./assets/img/project-illustration.jpg.avif"
+                    alt="Illustration projets" />
+                <div class="placeholder-text">
+                    <h2>Projets réalisés</h2>
+                    <p>Présentation des différents projets auxquels j’ai participé</p>
+                    <p>Apprenez-en plus sur les enjeux, les technologies et les solutions
+                        adoptées</p>
+                </div>
+            </div>
+        </section>
+<section id="project-presentation" class="hidden project-card">
+  <header class="project-card__header">
+    <div class="project-card__logo">
+      <img id="project-image" src="" alt="project-image">
+    </div>
+
+    <div class="project-card__title">
+      <h2 id="project-name"></h2>
+
+      <a id="project-link" class="project-card__link" href="" target="_blank" rel="noopener">
+        Voir le projet →
+      </a>
+    </div>
+  </header>
+
+  <div class="project-card__body">
+    <div class="project-info">
+      <h3>Contexte</h3>
+      <p id="project-context"></p>
+    </div>
+
+    <div class="project-info">
+      <h3>Objectif</h3>
+      <p id="project-goal"></p>
+    </div>
+
+    <div class="project-info project-info--full">
+      <h3>Technologies</h3>
+      <p id="project-technologies"></p>
+      <!-- ton JS pourra y injecter des spans/labels si tu veux -->
+    </div>
+
+    <div class="project-info project-info--full">
+      <h3>Difficultés rencontrées</h3>
+      <p id="project-difficulty"></p>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer id="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Robin Thomas</h3>
+                <p>Développeur web & logiciel</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="mailto:robin.thomas.dev@gmail.com">📧 robin.19thomas@gmail.com</a>
+                <a href="tel:+33612985850">📞 +33 6 12 98 58 50</a>
+                <a href="https://www.linkedin.com/in/robin-thomas-9679571b2/" target="_blank" rel="noopener">
+                    🔗 LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Robin Thomas — Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+
+</html>

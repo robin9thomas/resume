@@ -1,0 +1,451 @@
+
+:root {
+    --font-family:  "InterVariable",
+                    system-ui,
+                    -apple-system,
+                    Segoe UI,
+                    Roboto,
+                    Ubuntu,
+                    Cantarell,
+                    Noto Sans,
+                    sans-serif;
+    --title-font-size: 2em;
+    --subtitle-font-size: 1.5em;
+    --body-font-size: 1.25em;
+    
+    --title-color: rgb(1,19,51);
+    --subtitle-color: #2b2b2b;
+    --body-color: #2b2b2b;
+    --header-color: rgb(1,19,51);
+}
+
+@font-face {
+  font-family: "InterVariable";
+  src: url("./assets/fonts/Inter-4/InterVariable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
+}
+
+html {
+    font-size: var(--body-font-size);
+    color: var(--body-color);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+h1 {
+    font-size: var(--title-font-size);
+    color: var(--title-color);
+}
+
+h2 {
+    font-size: var(--subtitle-font-size);
+    color: var(--subtitle-color);
+}
+
+header {
+    background-color: var(--header-color);
+    color: var(--title-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+    width: full;
+}
+
+.header-logo {
+    height: 50px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    padding: 7em 10px 0px 10px;
+    background-color: rgb(1,19,51);;
+    background-image: url('./assets/img/airbus-carbon-grid-cropped-lg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.profile h2 {
+    margin: 0;
+    color: azure;
+
+}
+
+.description {
+    margin: 0;
+    padding: 0px 50px;
+}
+
+.description p {
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===== Knowledge section ===== */
+.knowledge{
+  display: grid;
+  grid-template-columns: 2fr 1.2fr; /* skills plus large que diplomas */
+  gap: 48px;
+  padding: 0 clamp(24px, 6vw, 100px);
+  align-items: start;
+  margin: 2em 0;
+}
+
+/* ===== Skills columns ===== */
+.skills{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  padding: 0; /* on enlève le padding qui “gonfle” */
+}
+
+/* Chaque bloc (Langages / Frameworks / Outils) */
+.skills > div{
+  padding: 24px 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.skills > div:hover{
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.085);
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* Titres */
+.knowledge h3{
+  margin: 0 0 14px;
+  font-size: 26px;
+  letter-spacing: .2px;
+}
+
+/* Listes */
+.knowledge ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.knowledge li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  opacity: .95;
+}
+
+/* Puce custom (petit point lumineux) */
+.knowledge li::before{
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.10);
+  flex: 0 0 7px;
+}
+
+/* ===== Diplomas ===== */
+.diplomas{
+  width: auto; /* on laisse la grille gérer */
+  padding: 24px 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.diplomas h3{
+  margin-bottom: 14px;
+}
+
+.diplomas li{
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.35;
+  opacity: .95;
+}
+
+/* Chaque diplôme un peu plus “aéré” */
+.diplomas ul{
+  gap: 14px;
+}
+
+.projects-header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 50px;
+}
+
+.projects-header h3 {
+    margin: 0;
+    padding: 16px 40px;
+    font-size: 16px;
+}
+
+.projects-header span {
+    color: azure;
+    padding : 16px 40px;
+    font-size: 16px;  
+    font-family: var(--font-family);
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: currentColor;
+  padding-bottom: 4px; 
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;           
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right; 
+  transition: transform 0.35s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left; 
+}
+
+#project-placeholder {
+  width: 100%;
+  padding: clamp(48px, 6vw, 96px) 0;
+}
+
+.project-placeholder-container {
+  width: min(1100px, 90vw);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.project-illustration {
+  width: 100%;
+  height: auto;
+  max-width: 560px;
+  justify-self: center;
+
+  /* optionnel : un rendu plus “clean” */
+  border-radius: 18px;
+}
+
+.placeholder-text h2 {
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.1;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.02em;
+}
+
+.placeholder-text p {
+  margin: 0 0 12px 0;
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.placeholder-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Section container */
+#project-presentation {
+  width: min(800px, 90vw);
+  margin: clamp(24px, 4vw, 64px) auto;
+  padding: clamp(20px, 3vw, 36px);
+
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 20px;
+  background: #fff;
+
+  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.project-card__header {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.project-card__logo {
+  flex: 0 0 auto;
+}
+
+/* Ton image garde son id */
+#project-image {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+
+  background: rgba(0,0,0,0.04);
+  border-radius: 16px;
+  padding: 10px;
+}
+
+/* Title + link */
+.project-card__title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+#project-name {
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 34px);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: azure;
+}
+
+.project-card__link {
+  font-size: 15px;
+  text-decoration: none;
+  color: azure;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  margin-right: 30px;
+  padding: 5px 0px;
+}
+
+.project-card__link:hover {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+
+.project-card__body {
+  padding-top: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 28px;
+}
+
+.project-info {
+  padding: 14px 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.02);
+}
+
+.project-info--full {
+  grid-column: 1 / -1;
+}
+
+.project-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.7;
+  color: var(--body-color);
+}
+
+/* Si ton JS met des <span> en bold, on garde */
+#project-presentation p span {
+  font-weight: 700;
+}
+
+#site-footer {
+  background: rgb(1, 19, 51);
+  color: white;
+  padding: 64px 0 24px 0;
+}
+
+.footer-container {
+  width: min(1100px, 90vw);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.02em;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  width: min(1100px, 90vw);
+  margin: 40px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.6;
+}
