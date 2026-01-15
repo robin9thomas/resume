@@ -35,11 +35,11 @@ function displayProject(projectId) {
         document.getElementById("project-presentation").classList.remove("hidden");
         document.getElementById("project-image").src = project.image;
     }); 
-
-    window.scrollTo({
-    top: document.documentElement.scrollHeight-100,
-    behavior: "smooth",
-    });
+    
+window.scrollTo({
+  top: document.documentElement.scrollHeight - window.innerHeight - 100,
+  behavior: "smooth",
+});
 }
 
 function resetProjectDisplay() {
