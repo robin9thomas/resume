@@ -184,7 +184,6 @@ header {
   opacity: .95;
 }
 
-/* Chaque diplôme un peu plus “aéré” */
 .diplomas ul{
   gap: 14px;
 }
@@ -254,8 +253,6 @@ header {
   height: auto;
   max-width: 560px;
   justify-self: center;
-
-  /* optionnel : un rendu plus “clean” */
   border-radius: 18px;
 }
 
@@ -295,7 +292,6 @@ header {
   box-shadow: 0 18px 50px rgba(0,0,0,0.08);
 }
 
-/* Header */
 .project-card__header {
   display: flex;
   align-items: center;
@@ -309,7 +305,6 @@ header {
   flex: 0 0 auto;
 }
 
-/* Ton image garde son id */
 #project-image {
   width: 84px;
   height: 84px;
@@ -448,4 +443,25 @@ header {
   text-align: center;
   font-size: 14px;
   opacity: 0.6;
+}
+
+@media (max-width: 1100px){
+  .knowledge{
+    grid-template-columns: 1fr;
+  }
+  .skills{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px){
+  .skills{
+    grid-template-columns: 1fr;
+  }
+  .knowledge h3{
+    font-size: 24px;
+  }
+  .knowledge li{
+    font-size: 17px;
+  }
 }
